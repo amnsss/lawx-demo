@@ -1,0 +1,4 @@
+<view id="{{id}}" class="switch_container {{state.checked ? 'toggle-on' : 'toggle-off'}}"
+    style="background-color:{{state.checked ? (backgroundColor || '#1ba9ba' ) : '#e5e5e5'}}"
+    bindtap="switchChangeValue" data-id="{{id}}"
+/>

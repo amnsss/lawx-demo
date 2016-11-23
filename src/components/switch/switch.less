@@ -1,0 +1,61 @@
+/**switch.wxss**/
+.switch_container {
+	position: relative;
+    overflow: hidden;
+	width: 52px;
+	height: 32px;
+	border-radius: 16px;
+}
+
+.switch_container::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    border-radius: 15px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+}
+
+.switch_container::after {
+	content: "";
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background-color: #fff;
+	transition: left ease-in-out 0.2s;
+    -webkit-transition: left ease-in-out 0.2s;
+	top: 1px;
+}
+
+.toggle-off {
+	background-color: #e5e5e5;
+}
+
+.toggle-off::before {
+    width: 50px;
+	height: 30px;
+    left: 1px;
+    top: 1px;
+}
+
+.toggle-off::after {
+	box-shadow: 1px 2px 4px #aaaaaa;
+	left: 1px;
+}
+
+.toggle-on {
+	background-color: #1ba9ba;
+}
+
+.toggle-on:before {
+    width: 0px;
+	height: 0px;
+	left: 30px;
+	top: 15px;
+}
+
+.toggle-on::after {
+	left: 21px;
+	/*box-shadow: 0px 1px 4px #aaaaaa;*/
+}
